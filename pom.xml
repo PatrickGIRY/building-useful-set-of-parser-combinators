@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>experiments</groupId>
-    <artifactId>build-useful-set-of-parser-combinators</artifactId>
+    <artifactId>building-useful-set-of-parser-combinators</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
