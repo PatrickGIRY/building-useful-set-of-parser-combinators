@@ -1,4 +1,5 @@
 package experiments.parser.combinators;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -57,5 +58,9 @@ public interface Parser<T> {
 
     static Parser<Integer> anyOfRangeClosed(int startInclusive, int endInclusive) {
         return anyOf(IntStream.rangeClosed(startInclusive, endInclusive));
+    }
+
+    default <U> Parser<U> map(Function<T, U> mapper) {
+        return input -> apply(input).onSuccess((value, remaining) -> Result.success(mapper.apply(value), remaining));
     }
 }

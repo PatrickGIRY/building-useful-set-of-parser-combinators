@@ -3,8 +3,8 @@ package experiments.parser.combinators;
 import java.util.Objects;
 
 public class Pair<T, U> {
-    private final T first;
-    private final U second;
+    public final T first;
+    public final U second;
 
     public static Pair<Integer, Integer> of(int first, int second) {
         return new Pair<>(first, second);
@@ -19,7 +19,6 @@ public class Pair<T, U> {
     }
 
     private Pair(T first, U second) {
-
         this.first = first;
         this.second = second;
     }
